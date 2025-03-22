@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import OneHotEncoder
 
-from utils import preprocess_data
+from .utils import preprocess_data
 
 
 def print_stats(df, names, desc):

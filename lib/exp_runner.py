@@ -1,8 +1,8 @@
 import pandas as pd
 import wandb
 
-from utils import calc_metrics
-from prepare_run import setup_model, setup_data
+from .utils import calc_metrics
+from .prepare_run import setup_model, setup_data
 
 
 def run_exp(

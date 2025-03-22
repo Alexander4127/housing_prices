@@ -1,7 +1,7 @@
 import numpy as np
 
-from exp_runner import run_exp
-from optimizers import GridOptimizer, OptunaOptimizer
+from lib.exp_runner import run_exp
+from lib.optimizers import GridOptimizer, OptunaOptimizer
 
 
 use_wandb = False

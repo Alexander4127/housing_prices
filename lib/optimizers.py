@@ -2,7 +2,7 @@ import itertools
 import numpy as np
 import optuna
 
-from exp_runner import run_exp
+from .exp_runner import run_exp
 
 class GridOptimizer:
     def __init__(self, args_to_grid, **kwargs):

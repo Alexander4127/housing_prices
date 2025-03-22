@@ -6,8 +6,8 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.svm import SVC
 
-from load_data import load_main_data, load_add_data, fill_features, generate_synt
-from utils import preprocess_data, split_results, MeanModel
+from .load_data import load_main_data, load_add_data, fill_features, generate_synt
+from .utils import preprocess_data, split_results, MeanModel
 
 
 def setup_model(model_tp, verbose, seed, **kwargs):
@@ -30,7 +30,9 @@ def setup_model(model_tp, verbose, seed, **kwargs):
 
 def setup_data(datasets, verbose, seed):
     df, num_features, cat_features = load_main_data(verbose=verbose)
-    df, df_test = split_results(df, test_size=0.2, num_quantiles=10, seed=seed)
+    df, df_test = split_results(
+        df, test_size=0.2, num_quantiles=10, seed=seed, verbose=verbose
+    )
     if datasets['main'] != 'full':
         df = df.sample(n=datasets['main'])
 
