@@ -16,7 +16,7 @@ def main():
     model = load_model("model.cbm")
 
     st.sidebar.header("Input Parameters")
-    area = st.sidebar.number_input("Area (m^2)", min_value=100, max_value=1500, value=480)
+    area = st.sidebar.slider("Area (m^2)", min_value=100, max_value=1500, value=480)
     bed = st.sidebar.number_input("#Bedrooms", min_value=1, max_value=6, value=2)
     bath = st.sidebar.number_input("#Bathrooms", min_value=1, max_value=4, value=1)
     fl = st.sidebar.number_input("#Floors", min_value=1, max_value=4, value=2)
